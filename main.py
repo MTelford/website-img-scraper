@@ -5,13 +5,13 @@ import requests
 
 class WebsiteImageScraper():
 
-    ''' Finds wikipedia page based on search_query
+    ''' Finds website page based on search_query
         and provides interface to work with images
         from that page.
         Can be used to get images as BS4 obj
-        for further manipulation or can write
+        for further manipulation, can write
         html img elements to file for use
-        elsewhere.\n
+        elsewhere, or return all image sources.\n
 
         :param str search_query: Search query \n
         :param str search_website: Website to scrape images from (only name not URL) \n  
@@ -32,12 +32,12 @@ class WebsiteImageScraper():
         
         """ CALLED IN CONSTRUCTOR
             Takes search_query and returns all
-            html images as bs4 obj from 1st wikipedia page
-            resulting from google search using 
+            html images as bs4 obj from 1st website page
+            resulting from Google search using 
             search query.
              """           
 
-        # searches google for first wikipedia result using provided search term
+        # searches google for first website result using provided search term
         for j in search(self.search_query, tld="co.in", num=1, stop=1, pause=2):
             result = j
 
