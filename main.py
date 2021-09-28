@@ -3,7 +3,7 @@ from googlesearch import search
 import requests
 
 
-class WikipediaImageScraper():
+class WebsiteImageScraper():
 
     ''' Finds wikipedia page based on search_query
         and provides interface to work with images
@@ -12,18 +12,20 @@ class WikipediaImageScraper():
         for further manipulation or can write
         html img elements to file for use
         elsewhere.\n
-               
+
         :param str search_query: Search query \n
+        :param str search_website: Website to scrape images from (only name not URL) \n  
         :param str file_path: Path to store image results as HTML \n 
         :method: write_filtered_images_to file() \n
         :method: get_html_imgs(), returns all images as bs4 obj \n
         :method: filter_correct_imgs(), filters imgs using filter class (not built) '''
     
-    def __init__(self, search_query, file_path):
+    def __init__(self, search_query, search_website, file_path):
         
+        self.search_website = search_website       
+        self.search_query = search_website + ' ' + search_query
         self.file_path = file_path        
-        self.search_query = 'wikipedia ' + search_query       
-        self.html_images = self.get_html_imgs()
+        self.html_images = self.get_html_imgs()         
         
     
     def get_html_imgs(self):    
@@ -85,5 +87,6 @@ class WikipediaImageScraper():
 
 
 
+img_scraper = WebsiteImageScraper('elon musk', 'wikipedia', 'index.html')
 
-
+img_scraper.write_filtered_images_to_file()
