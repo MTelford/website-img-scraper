@@ -7,8 +7,8 @@ A tool for scraping images off any website
 ## Description
 
 This tool can be used to scrape images from a specified website. 
-We provide a search term (such as a name or object) and a website name (not the URL) and
-the images found on the page which is the top Google result are written to the users file of choice.
+Provide a search term (such as a name or object) and a website name (not the URL).
+The images found on the page, which is the top Google result, are written to the users file of choice in HTML format. (There is also a method for aquiring all HTML image element sources as a list).
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ Python 3.8+
 
 ### Installing
 
-Clone the repo via your preferred method
+Clone the repo via your preferred method <br></br>
 Create a virtual envirnoment, for eg
 ``` python3.8 -m virutalenv env ```
 
@@ -47,8 +47,7 @@ It will then write the scraped images to the specified file ```index.html```.
 
 **Note:**
 There is a method in the class for filtering scraped images that is essentially non functional
-at this point. The idea here is to add some filtering method in the future (such as ML models) to further specify the
-images.
+at this point. The idea here is to add some filtering method in the future (such as ML models) to further specify the images. This could be achieved by subclassing and overriding the filter method with the preferred method for filtering the images.
 
 ## Authors
 
