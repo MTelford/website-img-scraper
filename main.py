@@ -86,7 +86,3 @@ class WebsiteImageScraper():
         return images_of_search_query
 
 
-
-img_scraper = WebsiteImageScraper('elon musk', 'wikipedia', 'index.html')
-
-img_scraper.write_filtered_images_to_file()
