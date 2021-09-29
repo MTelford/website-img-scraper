@@ -2,7 +2,7 @@
 
 _Website Image Scraper_
 
-A tool for scraping images off any website
+A tool for scraping images off a webpage
 
 ## Description
 
