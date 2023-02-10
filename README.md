@@ -47,7 +47,7 @@ It will then write the scraped images to the specified file ```index.html```.
 
 **Note:**
 There is a method in the class for filtering scraped images that is essentially non functional
-at this point. The idea here is to add some filtering method in the future (such as ML models) to further specify the images. This could be achieved by subclassing and overriding the filter method with the preferred method for filtering the images.
+at this point. The idea here is to add some filtering method in the future (such as ML models) to further specify the images. 
 
 ## Authors
 
